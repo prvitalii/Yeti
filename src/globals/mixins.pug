@@ -1,0 +1,7 @@
+mixin makeNav(data)
+	ul.nav(class= data.position)
+		if data.brand
+			a(href='#').navbar-brand= data.brand  
+		each item in data.name
+			li.nav-item
+				a(href='#').nav-link.text-info= item

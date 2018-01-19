@@ -1,4 +1,26 @@
-mixin b-header(title)
+-
+	var navbarL = 
+		{
+			brand: "Yeti Agency",
+			name: ["One", "Two"],				
+			position: "justify-content-start"
+		}
+-
+	var navbarR = 
+		{
+			name: ["Three", "Four", "Five"],
+			position: "justify-content-end"
+		}
+mixin makeNav(data)
+	ul.nav(class= data.position)
+		if data.brand
+			a(href='#').navbar-brand= data.brand  
+		each item in data.name
+			li.nav-item
+				a(href='#').nav-link.text-info= item
+
+mixin b-navbar()
 	header.header
-		img.header__logo(src=asset('i/logo.png') style="width: 100px;")
-		h1= title
+		nav.navbar.navbar-light.bg-light
+			+makeNav(navbarL)
+			+makeNav(navbarR)

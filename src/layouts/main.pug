@@ -1,8 +1,5 @@
 extends root
 
-append params
-	- var userAuth = false
-
 block styles
 	link(rel="stylesheet" href=asset("styles.css"))
 	//- bootstrap
@@ -21,11 +18,6 @@ block scripts
 	script(src=asset("bootstrap.min.js"))
 
 block main
-	if userAuth
-		+b-header('Заголовок')
 	block content
-
-	//- +b-footer()
-
 
 

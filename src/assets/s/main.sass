@@ -1,12 +1,12 @@
+@import "mixins"
 html
 	background: #ff690033
-
 body
 	display: block
+	&__cleafix
+		+clearfix()
+	&__logo
+		width: 200px
+		height: 200px
 	
-.cleafix
-	+clearfix()
 	
-.logo
-	width: 200px
-	height: 200px

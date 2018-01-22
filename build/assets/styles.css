@@ -1,12 +1,17 @@
-html {
-  background: grey; }
+* {
+  margin: 0;
+  padding: 0; }
 
-body {
-  display: block; }
-  body__cleafix:after {
-    content: ' ';
-    display: table;
-    clear: both; }
-  body__logo {
-    width: 200px;
-    height: 200px; }
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem !important; }
+  h2 {
+    font-size: 1.25rem !important; }
+  h3 {
+    font-size: 1.1875rem !important; } }

@@ -1,7 +1,11 @@
 extends layouts/main
 
-append params
-	- pageTitle = "Сторінка 1"
-
 block content
-	h1 Hello, World!
+	+b-navbar(navbarData)
+	+b-intro(introData)
+	.container
+		+b-about(aboutUs)
+		+b-tools(ourTools)
+		+b-achievements(projects)
+		+b-works()
+		+b-footer(footerData)
